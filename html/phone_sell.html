@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>CSS Template</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/phone_buy_sell.css">
 
-</head>
+    <title>Telefon Sat</title>
+    <style>
+       .btn-block {
+    margin-top: 10px;
+    text-align: center;
+}
 
+button {
+    width: 50%;
+    padding: 10px 0;
+    margin: 10px auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    border: none;
+    background: #1c87c9;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+button:hover {
+    background: #26a9e0;
+}
+    </style>
+</head>
 <body>
     <div class="topnav">
 
@@ -16,67 +39,72 @@
         <a href="login_user.html">Giris Yap</a>
         <a href="phone_sell.html">Telefon Sat</a>
         <a href="phone_buy.html">Telefon Al</a>
-        <a class="active" href="C:\develop\codes\javascript\tel_site\index_temp.html">Ana Sayfa</a>
+        <a class="active" href="../index_temp.html">Ana Sayfa</a>
     </div>
 
     <div class="header">
-        <h2>Telefon Al</h2>
+        <h2>Telefon Sat</h2>
     </div>
 
-    <div class="row">
-        <div class="column-right-left" style="background-color:rgb(66, 38, 38);">
-            <h1>Telefon Marka</h1>
-            <ul>
-                <li><a href="#">Iphone</a></li>
-                <li><a href="#">Samsung</a></li>
-                <li><a href="#">Xiaomi</a></li>
-                <li><a href="#">Huawei</a></li>
-                <li><a href="#">Oppo</a></li>
-            </ul>
-            <h1>Telefon Hafızası</h1>
-            <ul>
-                <li><a href="#">16 GB</a></li>
-                <li><a href="#">32 GB</a></li>
-                <li><a href="#">64 GB</a></li>
-                <li><a href="#">128 GB</a></li>
-                <li><a href="#">256 GB</a></li>
-            </ul>
-            <h1>Telefon Rengi</h1>
-            <ul>
-                <li><a href="#">Siyah</a></li>
-                <li><a href="#">Beyaz</a></li>
-                <li><a href="#">Kırmızı</a></li>
-                <li><a href="#">Mavi</a></li>
-                <li><a href="#">Gri</a></li>
-            </ul>
+    <div class="center">
+        <p>Adınız Soyadınızı Giriniz:</p>
+        <div >
+        <input type="text" name="name" placeholder="Ad" />
+        <input type="text" name="name" placeholder="Soyad" />
         </div>
-        <div class="column" style="background-color:rgb(221, 27, 140);">
-            <ul>
-                <li>
-                    <h1>Heading</h1>
-                    <img src="C:\develop\codes\javascript\tel_site\images\iphone.jpg" alt="" width="%100" height="500">
-                    <p>İphone 11, 64 gb, mor</p>
-                </li>
-                <li>
-                    <h1>Heading</h1>
-                    <img src="C:\develop\codes\javascript\tel_site\images\iphone.jpg" alt="" width="%100" height="500">
-                    <p>İphone 11, 64 gb, mor</p>
-                </li>
-                <li>
-                    <h1>Heading</h1>
-                    <img src="C:\develop\codes\javascript\tel_site\images\iphone.jpg" alt="" width="%100" height="500">
-                    <p>İphone 11, 64 gb, mor</p>
-                </li>
-            </ul>
-
+    </div>
+    <div class="center">
+        <p>Telefon Numaranızı Giriniz:</p>
+        <div >
+        <input type="text" name="name" placeholder="5** *** ** **" />
         </div>
-        <div class="column-right-left" style="background-color:white;">Column</div>
     </div>
-
-    <div class="footer">
-        <p>Footer</p>
+    <div class="center">
+        <p>Adresinizi Giriniz:</p>
+        <textarea cols=50% rows="2"></textarea>
     </div>
+    <div >
+    <label for="cars" class="center">Telefon Markası Giriniz:</label>
 
+    <select name="cars" id="cars" class="center">
+    <option value="Iphone">Iphone</option>
+    <option value="Samsung">Samsung</option>
+    <option value="Xiaomi">Xiaomi</option>
+        <option value="Oppo">Oppo</option>
+    </select>  
+    </div>
+    <br>
+    <div class="center">
+        <p>Telefon Modelini Giriniz:</p>
+        <textarea cols=50% rows="2"></textarea>
+    </div>
+    <br>
+    <div >
+        <label for="cars" class="center">Telefon Hafızası Seçiniz:</label>
+    
+        <select name="cars" id="cars" class="center">
+        <option value="16gb">16GB</option>
+        <option value="32gb">32GB</option>
+    <option value="64gb">64GB</option>
+    <option value="128gb">128GB</option>
+    <option value="256gb">256GB</option>
+    </select>  
+        </div> 
+    <br>
+    <div class="center">
+        <p>Belirtmek istediğiniz detayları yazınız:</p>
+        <textarea cols=50% rows="2"></textarea>
+    </div>
+    <br>
+    <input class="center" type="file" accept="image/*"placeholder="Resim Yükle" />
+    <br>
+    <a href="../index.html" class="center">İlanı Eklemek için tıklayın. </a>
+    <div class="btn-block">
+        <button onclick=""> <a href="../index.html"></a> İlanı Ekleyin</button>
+    </div>
+    
+    <div class="btn-block">
+        <button type="submit" href="../index.html">Tıkla</button>
+    </div>
 </body>
-
 </html>

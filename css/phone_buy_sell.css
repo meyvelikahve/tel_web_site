@@ -7,6 +7,18 @@ body {
     font-family: Sans-serif;
     line-height: 1.5em;
 }
+div h1{
+    display: flex;
+    justify-content: space-between;
+    width: 200;
+    color: red;
+}
+
+#myslogan{
+    display: flex;
+    justify-content: space-between;
+    color: red;
+}
 
 #header {
     position: absolute;
@@ -118,6 +130,8 @@ body {
 
 .center {
     display: block;
+    display: flex;
+    justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
     width: 50%;

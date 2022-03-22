@@ -1,55 +1,30 @@
 <!DOCTYPE html>
-<!-- Template by quackit.com -->
-<html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>2 Rows, 2 Columns, A</title>
-    <!-- <link rel="stylesheet" href="C:\develop\codes\javascript\tel_site\css\user.css"> -->
-    <!-- <link rel="stylesheet" href="C:\develop\codes\javascript\tel_site\css\phone_buy_sell.css"> -->
+    <title>CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/phone_buy_sell.css">
-    <link rel="stylesheet" href="../css/user.css">
-
-
-    <!-- <style>
-        .padding {
-            padding-left: 500px;
-        }
-    </style> -->
 
 </head>
 
 <body>
     <div class="topnav">
-        <h1>Telefon Al-Sat</h1>
 
 
-        <a href="#hakkımızda">Hakkımızda</a>
-        <a href="phone_buy.html"> Telefon Al</a>
+        <a href="login_user.html">Giris Yap</a>
         <a href="phone_sell.html">Telefon Sat</a>
-        <a href="login_user.html" class="active"> Giriş yap</a>
+        <a href="phone_buy.html">Telefon Al</a>
+        <a class="active" href="../index_temp.html">Ana Sayfa</a>
     </div>
 
+    <div class="header">
+        <h2>Telefon Al</h2>
+    </div>
 
-    <main>
-
-        <h1>Telefon Modeli</h1>
-        <img src="C:\develop\codes\javascript\tel_site\images\iphone.jpg" class="center" alt="">
-        <p class="center">İphone 11, 64 gb, mor</p>
-
-        <br>
-        <h1>Heading</h1>
-        <img src="C:\develop\codes\javascript\tel_site\images\iphone.jpg" class="center" alt="">
-        <p>İphone 11, 64 gb, mor</p><br>
-        <h1>Heading</h1>
-        <img src="C:\develop\codes\javascript\tel_site\images\iphone.jpg" class="center" alt="">
-        <p>İphone 11, 64 gb, mor</p>
-
-        </div>
-    </main>
-
-    <nav id="nav">
-        <div class="innertube">
+    <div class="row">
+        <div class="column-right-left" style="background-color:rgb(66, 38, 38);">
             <h1>Telefon Marka</h1>
             <ul>
                 <li><a href="#">Iphone</a></li>
@@ -74,13 +49,33 @@
                 <li><a href="#">Mavi</a></li>
                 <li><a href="#">Gri</a></li>
             </ul>
-            <div class="buton">
-                <button type="submit" href="/">Filtrele</button>
-            </div>
+        </div>
+        <div class="column" style="background-color:rgb(221, 27, 140);">
+            <ul>
+                <li>
+                    <h1>Heading</h1>
+                    <img src="../images/IPhone-X-Silver.jpg" alt="" width="%100" height="500">
+                    <p>İphone 11, 64 gb, mor</p>
+                </li>
+                <li>
+                    <h1>Heading</h1>
+                    <img src="../images/iphone.jpg" alt="" width="%100" height="500">
+                    <p>İphone 11, 64 gb, mor</p>
+                </li>
+                <li>
+                    <h1>Heading</h1>
+                    <img src="../images/samsung.jpg" alt="" width="%100" height="500">
+                    <p>İphone 11, 64 gb, mor</p>
+                </li>
+            </ul>
 
         </div>
-    </nav>
+        <div class="column-right-left" style="background-color:white;">Column</div>
+    </div>
 
+    <div class="footer">
+        <p>Footer</p>
+    </div>
 
 </body>
 
