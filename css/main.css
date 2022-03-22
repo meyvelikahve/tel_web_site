@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    height: 100%;
+    max-height: 100%;
+    font-family: Sans-serif;
+    line-height: 1.5em;
+}
+
+div h1 {
+    display: flex;
+    justify-content: space-between;
+    width: 200;
+    color: red;
+}
+
+#myslogan {
+    display: flex;
+    justify-content: space-between;
+    color: red;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    background: slategrey;
+}
+
+#nav {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    bottom: 0;
+    width: 230px;
+    overflow: auto;
+    background: slategrey;
+}
+
+#logo {
+    padding: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.column-right-left {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    height: 100%;
+}
+
+.column {
+    float: left;
+    width: 60%;
+    padding: 10px;
+    height: 600px;
+    align-items: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer {
+    background-color: white;
+    box-shadow: rgb(161, 58, 58);
+    padding: 10px;
+    text-align: center;
+}
+
+.topnav {
+    background-color: rgb(191, 206, 199);
+    overflow: hidden;
+}
+
+.topnav a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav p {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav h1 {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 7px 8px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: blue;
+    color: white;
+}
+
+.center {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+main {
+    position: absolute;
+    top: 100px;
+    /* Set this to the height of the header */
+    left: 230px;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background: rgb(150, 49, 49);
+}
+
+.innertube {
+    margin: 15px;
+    /* Provides padding for the content */
+}
+
+p {
+    color: #555;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+}
