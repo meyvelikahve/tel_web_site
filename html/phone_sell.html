@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/phone_buy_sell.css">
+    <link rel="stylesheet" href="../css/main.css">
 
     <title>Telefon Sat</title>
     <style>
@@ -31,6 +31,14 @@
         button:hover {
             background: #26a9e0;
         }
+        select{
+            width: 100px;
+        }
+        #dropdown{
+            width: 250px;
+            float: inline-end;
+            margin: auto;
+        }
     </style>
 </head>
 
@@ -51,8 +59,8 @@
     <div class="center">
         <p>Adınız Soyadınızı Giriniz:</p>
         <div>
-            <input type="text" name="name" placeholder="Ad" />
-            <input type="text" name="name" placeholder="Soyad" />
+            <input type="text" name="name" placeholder="Ad"/>
+            <input type="text" name="name" placeholder="Soyad"/>
         </div>
     </div>
     <div class="center">
@@ -66,14 +74,14 @@
         <textarea cols=50% rows="2"></textarea>
     </div>
     <div>
-        <label for="cars" class="center">Telefon Markası Giriniz:</label>
+        <label for="dropdown" class="center">Telefon Markası Giriniz:</label>
 
-        <select name="cars" id="cars" class="center">
-    <option value="Iphone">Iphone</option>
-    <option value="Samsung">Samsung</option>
-    <option value="Xiaomi">Xiaomi</option>
-        <option value="Oppo">Oppo</option>
-    </select>
+        <select  id="dropdown" class="center">
+            <option value="Iphone">Iphone</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Xiaomi">Xiaomi</option>
+            <option value="Oppo">Oppo</option>
+        </select>
     </div>
     <br>
     <div class="center">
@@ -82,15 +90,15 @@
     </div>
     <br>
     <div>
-        <label for="cars" class="center">Telefon Hafızası Seçiniz:</label>
+        <label for="dropdown" class="center">Telefon Hafızası Seçiniz:</label>
 
-        <select name="cars" id="cars" class="center">
-        <option value="16gb">16GB</option>
-        <option value="32gb">32GB</option>
-    <option value="64gb">64GB</option>
-    <option value="128gb">128GB</option>
-    <option value="256gb">256GB</option>
-    </select>
+        <select id="dropdown" class="center">
+            <option value="16gb">16GB</option>
+            <option value="32gb">32GB</option>
+            <option value="64gb">64GB</option>
+            <option value="128gb">128GB</option>
+            <option value="256gb">256GB</option>
+        </select>
     </div>
     <br>
     <div class="center">
@@ -98,7 +106,16 @@
         <textarea cols=50% rows="2"></textarea>
     </div>
     <br>
-    <input class="center" type="file" accept="image/*" placeholder="Resim Yükle" />
+    <div id="dropdown">
+        <p>Kapak Resmi</p>
+        
+
+    </div>
+    <div id="dropdown">
+        <input class="center" type="file" accept="image/*" placeholder="Resim Yükle" />
+    </div>
+    
+    
     <br>
     <a href="../index.html" class="center">İlanı Eklemek için tıklayın. </a>
     <div class="btn-block">
