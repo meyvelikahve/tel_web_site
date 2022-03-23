@@ -1,6 +1,6 @@
 html,
 body {
-    display: flex;
+    
     justify-content: center;
     height: 100%;
 }
@@ -18,10 +18,9 @@ p {
     color: #666;
 }
 
-h1 {
-    padding: 10px 0;
-    font-size: 32px;
-    font-weight: 300;
+div h1 {
+    width: 200;
+    color: black;
     text-align: center;
 }
 
@@ -47,10 +46,12 @@ hr {
     min-height: 200px;
     padding: 10px 0;
     margin: auto;
+    margin-top: 100px;
     border-radius: 5px;
     border: solid 1px #ccc;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, .31);
     background: white;
+    vertical-align: middle;
 }
 
 form {

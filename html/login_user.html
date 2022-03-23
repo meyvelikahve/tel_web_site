@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
@@ -8,31 +8,51 @@
     <link rel="stylesheet" href="../css/user.css">
     <link rel="stylesheet" href="../css/navigation_bar.css">
     <title>Giriş Yap</title>
-    <style>
-        
-    </style>
+    <!-- <style>
+        .container {}
+
+.left {
+width:100px;
+float:left;
+top: auto;
+text-align:left;
+}
+.center {
+width:100px;
+float:left;
+top: auto;
+text-align:center;
+}
+.right {
+width:100px;
+float:top;
+top: auto;
+text-align:right;
+}
+    </style> -->
 
 </head>
 
 <body>
 
-        <h1>Telefon Al-Sat</h1>
 
-        <div>
+        <div class="topnav">
+            <h1>Telefon Al-Sat</h1>
             <a href="#hakkımızda">Hakkımızda</a>
             <a href="html/phone_buy.html"> Telefon Al</a>
             <a href="html/phone_sell.html">Telefon Sat</a>
-            <a href="html/login_user.html" class="active"> Giriş yap</a>
+            <a href="../index.html" class="active"> Ana Sayfa</a>
         </div>
         
     
-
         
-        <h1>Giriş Yapın</h1>
-        <form action="/">
+        
+        <div  class="main-block-create">
+            <form action="/">
             <hr>
 
             <hr>
+            <h1>Giriş Yapın</h1>
             <input type="text" name="name" id="name" placeholder="Email" required/>
             <input type="password" name="name" id="name" placeholder="Şifre" required/>
             <p>Hesabınız yok mu? <a href="create_user.html">Kayıt Olun</a>.</p>
@@ -40,6 +60,8 @@
                 <button type="submit" href="/">Giriş Yap</button>
             </div>
         </form>
+        </div>
+        
 </body>
 
 </html>
