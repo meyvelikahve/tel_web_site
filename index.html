@@ -24,9 +24,58 @@
 
 
 
-    <div class="#myslogan">
-        <h1 class="center">Ucuza, güvenilir ve kolay </h1>
-        <img src="images/samsung.jpg" alt="iphone x" class="center" width="500" height="500">
+    <div>
+        <br>
+        <div class="slideshow-container center">
+
+            <div class="mySlides fade center">
+                <div class="numbertext"></div>
+                <img src="images/IPhone-X-Silver.jpg">
+            </div>
+
+            <div class="mySlides fade center">
+                <div class="numbertext"></div>
+                <img src="images/samsung2.jpg">
+            </div>
+
+            <div class="mySlides fade center">
+                <div class="numbertext"></div>
+                <img src="images/xiaomi.jpg">
+            </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 3000); // Change image every 2 seconds
+            }
+        </script>
+        <!-- <img src="images/samsung.jpg" alt="iphone x" class="center" width="500" height="500"> -->
         <!-- <img src="images/iphone.jpg" alt="iphone x" class="center">
         <img src="images/iphone.jpg" alt="iphone x" class="center"> -->
     </div>
@@ -35,6 +84,7 @@
     <div class="center" style="padding:128px 16px" id="about">
 
         <h3>Eski ikinci el telefonlarınızı satmanız için veya başka kişilerden ikinci el telefon alabilmeniz için aracılık görevi görüyoruz.</h3>
+        <br>
         <div>
             <div>
                 <h3>Başlangıç</h3>

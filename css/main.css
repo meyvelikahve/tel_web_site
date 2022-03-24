@@ -4,7 +4,7 @@ body {
     overflow: scroll;
     height: 100%;
     max-height: 100%;
-    font-family: Sans-serif;
+    font-family: sans-serif;
     line-height: 1.5em;
 }
 
@@ -12,45 +12,17 @@ div h1 {
     display: flex;
     justify-content: space-between;
     width: 200;
-    color: red;
+    color: rgb(55, 0, 255);
 }
 
-#myslogan {
-    display: flex;
-    justify-content: space-between;
-    color: red;
-}
-
-#header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    overflow: hidden;
-    background: slategrey;
-}
-
-#nav {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    bottom: 0;
-    width: 230px;
-    overflow: auto;
-    background: slategrey;
-}
-
-#logo {
-    padding: 10px;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
+input,
+textarea,
+select {
+    margin: 10px;
+    font-family: Arial, sans-serif;
+    border-radius: 60;
+    font-size: 16px;
+    color: #666;
 }
 
 .header {
@@ -64,34 +36,9 @@ body {
     float: left;
     width: 20%;
     height: 100%;
-    
 }
-
-.column {
-    float: left;
-    width: 60%;
-    padding: 10px;
-    height: 600px;
-    align-items: center;
-    background-color: black;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.footer {
-    background-color: white;
-    box-shadow: rgb(161, 58, 58);
-    padding: 10px;
-    text-align: center;
-}
-
 
 .center {
-    display: block;
     display: flex;
     justify-content: space-between;
     margin-left: auto;
@@ -99,39 +46,46 @@ body {
     width: 50%;
 }
 
-@media (max-width: 600px) {
-    .column {
-        width: 100%;
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+    width: 500px;
+    height: 500px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
     }
 }
 
-main {
-    position: absolute;
-    top: 100px;
-    /* Set this to the height of the header */
-    left: 230px;
-    right: 0;
-    bottom: 0;
-    overflow: auto;
-    background: rgb(150, 49, 49);
-}
-
-.innertube {
-    margin: 15px;
-    /* Provides padding for the content */
-}
-
-p {
-    color: #555;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul a {
-    color: white;
-    text-decoration: none;
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
 }

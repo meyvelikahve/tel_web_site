@@ -1,15 +1,6 @@
-#nav {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    bottom: 0;
-    width: 230px;
-    overflow: auto;
-    background: slategrey;
-}
-
 .topnav {
     background-color: rgb(191, 206, 199);
+    border-bottom: 10%;
     overflow: hidden;
 }
 
@@ -46,6 +37,6 @@
 }
 
 .topnav a.active {
-    background-color: blue;
+    background-color: #1c87c9;
     color: white;
 }
