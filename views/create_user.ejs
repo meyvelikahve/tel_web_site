@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="navigation_bar.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <%-include('./inc/nav_bar')%>
+    </div>
+    <div class="main-block-create">
+        <h1>Hesap Oluşturun</h1>
+        <form action="/">
+            <hr>
+
+            <hr>
+            <input type="text" name="name" id="name" placeholder="Ad" required/>
+            <input type="text" name="name" id="name" placeholder="Soyad" required/>
+            <input type="text" name="name" id="name" placeholder="Email" required/>
+            <input type="password" name="name" id="name" placeholder="Şifre" required/>
+            <input type="text" name="name" id="name" placeholder="Şehir" required/>
+            <hr>
+            <p>Butona tıklarsanı sözleşmeyi kabul etmiş sayılırsınız. <a href="#">Gizlilik sözleşmesi</a>.</p>
+            <hr>
+            <div class="btn-block">
+                <button type="submit" href="/">Kayıt ol</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
