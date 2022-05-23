@@ -10,30 +10,32 @@
 </head>
 
 <body>
+    <%if(messages.error){%>
+        <%=messages.error %>
+            <%} %>
+
+                <div class="topnav">
+                    <%-include('./inc/nav_bar')%>
+                </div>
 
 
-    <div class="topnav">
-        <%-include('./inc/nav_bar')%>
-    </div>
 
 
+                <div class="main-block-create">
+                    <form action="/login_user" ,method='post'>
+                        <h1>Giriş Yapın</h1>
+                        <hr>
 
+                        <hr>
 
-    <div class="main-block-create">
-        <form action="/">
-            <h1>Giriş Yapın</h1>
-            <hr>
-
-            <hr>
-
-            <input type="text" name="name" id="name" placeholder="Email" required/>
-            <input type="password" name="name" id="name" placeholder="Şifre" required/>
-            <p>Hesabınız yok mu? <a href="create_user">Kayıt Olun</a>.</p>
-            <div class="btn-block">
-                <button type="submit" href="/">Giriş Yap</button>
-            </div>
-        </form>
-    </div>
+                        <input type="text" name="name" id="name" placeholder="Email" required/>
+                        <input type="password" name="name" id="name" placeholder="Şifre" required/>
+                        <p>Hesabınız yok mu? <a href="create_user">Kayıt Olun</a>.</p>
+                        <div class="btn-block">
+                            <button type="submit" href="/">Giriş Yap</button>
+                        </div>
+                    </form>
+                </div>
 
 </body>
 

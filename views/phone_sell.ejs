@@ -27,14 +27,6 @@
                 color: #fff;
             }
             
-            button:hover {
-                background: #26a9e0;
-            }
-            
-            select {
-                width: 100px;
-            }
-            
             #dropdown {
                 width: 250px;
                 float: inline-end;
@@ -51,72 +43,74 @@
     <div class="header">
         <h2>Telefon Sat</h2>
     </div>
-
-    <div class="center">
-        <p>Adınız Soyadınızı Giriniz:</p>
-        <div>
-            <input type="text" name="name" placeholder="Ad" />
-            <input type="text" name="name" placeholder="Soyad" />
+    <form action="phone_sell" , method="post" , enctype="multipart/form-data">
+        <div class="center">
+            <p>Adınız Soyadınızı Giriniz:</p>
+            <div>
+                <input type="text" name="name" placeholder="Ad" required/>
+                <input type="text" name="name" placeholder="Soyad" required/>
+            </div>
         </div>
-    </div>
-    <div class="center">
-        <p>Telefon Numaranızı Giriniz:</p>
-        <div>
-            <input type="text" name="name" placeholder="5** *** ** **" />
+        <div class="center">
+            <p>Telefon Numaranızı Giriniz:</p>
+            <div>
+                <input type="text" name="name" placeholder="5** *** ** **" required/>
+            </div>
         </div>
-    </div>
-    <div class="center">
-        <p>Adresinizi Giriniz:</p>
-        <textarea cols=50% rows="2"></textarea>
-    </div>
-    <div>
-        <label for="dropdown" class="center">Telefon Markası Giriniz:</label>
+        <div class="center">
+            <p>Adresinizi Giriniz:</p>
+            <textarea cols=50% rows="2" required></textarea>
+        </div>
+        <div>
+            <label for="dropdown" class="center">Telefon Markası Giriniz:</label>
 
-        <select id="dropdown" class="center">
+            <select id="dropdown" class="center">
             <option value="Iphone">Iphone</option>
             <option value="Samsung">Samsung</option>
             <option value="Xiaomi">Xiaomi</option>
             <option value="Oppo">Oppo</option>
         </select>
-    </div>
-    <br>
-    <div class="center">
-        <p>Telefon Modelini Giriniz:</p>
-        <textarea cols=50% rows="2"></textarea>
-    </div>
-    <br>
-    <div>
-        <label for="dropdown" class="center">Telefon Hafızası Seçiniz:</label>
+        </div>
+        <br>
+        <div class="center">
+            <p>Telefon Modelini Giriniz:</p>
+            <textarea cols=50% rows="2"></textarea>
+        </div>
+        <br>
+        <div>
+            <label for="dropdown" class="center">Telefon Hafızası Seçiniz:</label>
 
-        <select id="dropdown" class="center">
+            <select id="dropdown" class="center">
             <option value="16gb">16GB</option>
             <option value="32gb">32GB</option>
             <option value="64gb">64GB</option>
             <option value="128gb">128GB</option>
             <option value="256gb">256GB</option>
         </select>
-    </div>
-    <br>
-    <div class="center">
-        <p>Belirtmek istediğiniz detayları yazınız:</p>
-        <textarea cols=50% rows="2"></textarea>
-    </div>
-    <br>
-    <div class="center">
-        <p>Kapak Resmi</p>
+        </div>
+        <br>
+        <div class="center">
+            <p>Belirtmek istediğiniz detayları yazınız: </p>
+            <textarea cols=50% rows="2"></textarea>
+        </div>
+
+        <br>
+        <div class="center">
+            <p>Kapak Resmi </p>
 
 
-    </div>
-    <div class="center">
-        <input type="file" accept="image/*" placeholder="Resim Yükle" />
-    </div>
+        </div>
+        <div class="center">
+            <input type="file" accept="image/*" placeholder="Resim Yükle" required/>
+        </div>
 
 
-    <br>
-    <a href="index" class="center">İptal etmek için tıklayın. </a>
-    <div class="btn-block">
-        <button onclick=""> <a href="../index.html"></a> İlanı Ekleyin</button>
-    </div>
+        <br>
+        <a href="/" class="center">İptal etmek için tıklayın. </a>
+        <div class="btn-block">
+            <button onclick=""> <a href="phone_buy"></a> İlanı Ekleyin</button>
+        </div>
+    </form>
 
 </body>
 

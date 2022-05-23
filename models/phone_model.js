@@ -26,13 +26,25 @@ const PhoneSchema = new Schema({
         type: String,
         require: true
     },
+    model: {
+        type: String,
+        require: true
+    },
     capacity: {
         type: String,
         require: true
     },
-    detail: {
+    color: {
         type: String,
         require: true
+    },
+    price: {
+        type: Number,
+        require: true
+    },
+    detail: {
+        type: String,
+        //require: true
     },
     //image
 

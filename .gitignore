@@ -1,2 +1,4 @@
 javascript
+.env
+node_modules
 app.js

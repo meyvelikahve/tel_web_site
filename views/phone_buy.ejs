@@ -66,14 +66,40 @@
         <div class="center">
             <ul>
                 <li>
-                    <h1>İphone X ---> 6000 TL</h1>
-                    <img src="IPhone-X-Silver.jpg" alt="" width="500" height="500">
-                    <p>Model: Iphone X</p>
-                    <p>Kapasite: 64 GB</p>
-                    <p>Renk: Beyaz</p>
-                    <p>Satıcının İletişim Numarası: 555 555 55 55</p>
-                    <p>Konum: Kütahya</p>
-                    <p>Açıklama: Ürünün garantisi bitmiştir. Tüm aksamları sorunsuz çalışmaktadır.</p>
+                    <!-- <h1>İphone X -6000 TL</h1> -->
+                    <%
+                    console.log(phones);
+                    phones.forEach(phone => { %>
+
+                        <h1>
+                            <%=phone.brand %>
+                                <%=phone.model%>
+                                    -->
+                                    <%=phone.price %> TL
+
+                        </h1>
+                        <img src="IPhone-X-Silver.jpg" alt="" width="500" height="500">
+                        <p>Model:
+                            <%=phone.brand%>
+                                <%=phone.model%>
+                        </p>
+                        <p>Kapasite:
+                            <%=phone.capacity%> GB</p>
+                        <p>Renk:
+                            <%=phone.color%>
+                        </p>
+                        <p>Satıcının İletişim Numarası:
+                            <%=phone.phonenumber%>
+                        </p>
+                        <p>Konum:
+                            <%=phone.city%>
+                        </p>
+                        <p>Açıklama:
+                            <%=phone.detail%>
+                        </p>
+
+                        <% }) %>
+
                 </li>
                 <li>
                     <h1>Samsung Galaxy S21 Plus ---> 8500 TL</h1>
