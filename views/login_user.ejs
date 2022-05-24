@@ -17,26 +17,22 @@
                 <div class="topnav">
                     <%-include('./inc/nav_bar')%>
                 </div>
-
-
-
-
                 <div class="main-block-create">
-                    <form action="/login_user" ,method='post'>
+                    <form action="/login_user" , method="post">
                         <h1>Giriş Yapın</h1>
                         <hr>
 
                         <hr>
 
-                        <input type="text" name="name" id="name" placeholder="Email" required/>
-                        <input type="password" name="name" id="name" placeholder="Şifre" required/>
+                        <input type="text" name="email" placeholder="Email" required/>
+                        <input type="password" name="password" id="password" placeholder="Şifre" required/>
                         <p>Hesabınız yok mu? <a href="create_user">Kayıt Olun</a>.</p>
+
                         <div class="btn-block">
-                            <button type="submit" href="/">Giriş Yap</button>
+                            <button type="submit">Giriş Yap</button>
                         </div>
                     </form>
                 </div>
-
 </body>
 
 </html>
