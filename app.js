@@ -30,7 +30,8 @@ const { render } = require('express/lib/response')
 
 const app = express()
 
-const dbURL = process.env.DATABASE_URL
+//const dbURL = process.env.DATABASE_URL
+const dbURL = 'mongodb+srv://meyvelikahve:recep123@telsite.xkqq0.mongodb.net/?retryWrites=true&w=majority'
 mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => app.listen(3000))
     .catch((err) => console.log(err))
