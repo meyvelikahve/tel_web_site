@@ -46,6 +46,11 @@ const PhoneSchema = new Schema({
         type: String,
         //require: true
     },
+    img:
+    {
+        data: Buffer,
+        contentType: String
+    }
     //image
 
 

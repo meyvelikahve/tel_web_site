@@ -48,18 +48,18 @@
             <p>Adınız Soyadınızı Giriniz:</p>
             <div>
                 <input type="text" name="name" placeholder="Ad" required/>
-                <input type="text" name="name" placeholder="Soyad" required/>
+                <input type="text" name="lastname" placeholder="Soyad" required/>
             </div>
         </div>
         <div class="center">
             <p>Telefon Numaranızı Giriniz:</p>
             <div>
-                <input type="text" name="name" placeholder="5** *** ** **" required/>
+                <input type="text" name="phone" placeholder="5** *** ** **" required/>
             </div>
         </div>
         <div class="center">
             <p>Adresinizi Giriniz:</p>
-            <textarea cols=50% rows="2" required></textarea>
+            <textarea cols=50% rows="2" name="address" required></textarea>
         </div>
         <div>
             <label for="dropdown" class="center">Telefon Markası Giriniz:</label>
@@ -74,7 +74,7 @@
         <br>
         <div class="center">
             <p>Telefon Modelini Giriniz:</p>
-            <textarea cols=50% rows="2"></textarea>
+            <input type="text" name="model" required/>
         </div>
         <br>
         <div>
@@ -91,7 +91,7 @@
         <br>
         <div class="center">
             <p>Belirtmek istediğiniz detayları yazınız: </p>
-            <textarea cols=50% rows="2"></textarea>
+            <textarea cols=50% name="detail" rows="2"></textarea>
         </div>
 
         <br>
@@ -101,7 +101,7 @@
 
         </div>
         <div class="center">
-            <input type="file" accept="image/*" placeholder="Resim Yükle" required/>
+            <input type="file" accept="image/*" name="myImage" placeholder="Resim Yükle" required/>
         </div>
 
 
