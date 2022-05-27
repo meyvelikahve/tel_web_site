@@ -6,58 +6,56 @@ const User = require('../models/user_model')
 const passport = require('passport')
 
 
-const users = []
 
-router.get('/login_user', (req, res) => {
 
-    User.find()
-        .then((result) => {
-            
-            result.forEach(user => {
-                users.push({
-                    email: user.email,
-                    password: user.password
-                })
-            });
-            console.log(users);
-            res.render('login_user', { users: result })
-        })
-        .catch((err) => {
-            console.log(err);
-        })
-})
-
-router.post('/login_user', passport.authenticate(
-    'local', {
-        successRedirect: '/',
-        failureRedirect: '/login_user',
-        failureFlash: true
-    }))
+router.get('/login_user', (req, res) => res.render('login_user'));
 
 router.get('/create_user', (req, res) => {
     res.render('create_user')
 })
 
+router.post('/login_user', passport.authenticate(
+    'local', {
+        successRedirect: '/user_profile',
+        failureRedirect: '/login_user',
+        failureFlash: true
+    }))
+
 router.post('/create_user', async(req, res) => {
-    try {
-        const hashedPassword = await bcrypt.hash(req.body.password, 10)
-        const user = User({
-            name: req.body.name,
-            email: req.body.email,
-            password: hashedPassword
+    const { name, email, password } = req.body;
+    const hashedPassword = await bcrypt.hash(password, 10)
+    User.findOne({ email: email })
+        .then(user => {
+            if (user) {
+                console.log('email daha önce kullanılmış');
+                res.render('create_user')
+            } else {
+                const newUser = new User({
+                    name: name,
+                    email: email,
+                    password: hashedPassword
+                });
+
+                newUser
+                    .save()
+                    .then(user => {
+
+                        res.redirect('/login_user');
+                    })
+                    .catch(err => console.log(err));
+            }
         })
-        user.save().then((result) => {
-            res.send()
-        }).catch((err) => console.log(err))
-        res.redirect('/login_user')
-    } catch (error) {
-        res.redirect('/create_user')
-    }
-    //console.log(users);
 })
+
+router.get('/logout', function(req, res, next) {
+    req.logout(function(err) {
+        if (err) { return next(err); }
+        res.redirect('/login_user');
+    });
+});
+
 
 module.exports = {
     router: router,
-    users: users
 
 }

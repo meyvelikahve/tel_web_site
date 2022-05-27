@@ -1,74 +1,84 @@
 const express = require("express");
 const router = express.Router();
+const multer = require("multer")
+
 const Phone = require("../models/phone_model");
-const multer = require("multer");
-var fs = require('fs');
-var path = require('path');
+const { ensureAuthenticated } = require('../config/auth');
 
-
-var storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, 'uploads')
+const storage = multer.diskStorage({
+    destination: function(request, file, callback) {
+        callback(null, './public/images/upload');
     },
-    filename: (req, file, cb) => {
-        cb(null, file.fieldname + '-' + Date.now())
-    }
+
+    //add back the extension
+    filename: function(request, file, callback) {
+        callback(null, Date.now() + file.originalname);
+    },
 });
 
-var upload = multer({ storage: storage });
+const upload = multer({
+    storage: storage,
+    limits: {
+        fieldSize: 1024 * 1024 * 3,
+    },
+});
 
 router.get("/phone_buy", (req, res) => {
-  Phone.find()
-    .sort({ createdAt: -1 })
-    .then((result) => {
-      res.render("phone_buy", { phones: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-router.get("/phone_sell", (req, res) => {
-  res.render("phone_sell");
-});
-
-router.post("/phone_sell",upload.single('myImage'), (req, res) => {
-  try {
-    const phone = new Phone({
-      name: req.body.name,
-      lastname: req.body.lastname,
-      phonenumber: req.body.phone,
-      address: req.body.address,
-      city: "Kütahya",
-      brand: "iPhone",
-      model: req.body.model,
-      capacity: "64",
-      color: "grey",
-      price: 9000,
-      img: {
-        data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
-        contentType: 'image/png'
-    }
-    });
-    Phone.create(phone, (err, item) => {
-        if (err) {
+    Phone.find()
+        .sort({ createdAt: -1 })
+        .then((result) => {
+            res.render("phone_buy", { phones: result });
+        })
+        .catch((err) => {
             console.log(err);
-        }
-        else {
-            phone
-      .save()
-      .then((result) => {
-        res.send();
-      })
-      .catch((err) => console.log(err));
-        }
-    });
-    
-    res.redirect("/phone_buy");
-  } catch (error) {
-    res.redirect("/phone_sell");
-  }
-  //console.log(users);
+        });
 });
+
+router.get("/phone_sell", ensureAuthenticated, (req, res) => {
+    res.render("phone_sell");
+});
+
+router.post("/phone_sell", upload.single('post_image'), (req, res) => {
+
+    console.log(req.file);
+    res.redirect("/phone_buy");
+    const phone = new Phone({
+        name: req.body.name,
+        lastname: req.body.lastname,
+        phonenumber: req.body.phone,
+        address: req.body.address,
+        city: req.body.city,
+        brand: req.body.brand,
+        model: req.body.model,
+        capacity: req.body.capacity,
+        color: req.body.color,
+        price: req.body.price,
+        detail: req.body.detail,
+        img: req.file.filename
+
+    });
+    try {
+
+        Phone.create(phone, (err, item) => {
+            if (err) {
+                console.log(err);
+            } else {
+                phone
+                    .save()
+                    .then((result) => {
+                        console.log('Telefon eklendi');
+                        res.send();
+                    })
+                    .catch((err) => console.log(err));
+            }
+        });
+
+
+        res.redirect("/phone_buy");
+    } catch (error) {
+        res.redirect("/phone_sell");
+    }
+});
+
 
 module.exports = router;

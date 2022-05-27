@@ -3,34 +3,48 @@
 
 <head>
     <%-include('./inc/head')%>
-        <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="navigation_bar.css">
+        //
+        <link rel="stylesheet" href="/css/user.css">
+        <link rel="stylesheet" href="/css/navigation_bar.css">
 
         <title>Telefon Sat</title>
         <style>
-            .btn-block {
-                margin-top: 10px;
+            #dropdown {
+                width: 300px;
+                text-align: center;
+                position: relative;
+            }
+            
+            .header {
+                background-color: white;
+                padding: 30px;
+                text-align: center;
+                font-size: 35px;
+            }
+            
+            .main-block-createe {
+                max-width: 800px;
+                min-height: 1000px;
+                padding: 10px 0;
+                margin: auto;
+                margin-top: 100px;
+                border-radius: 5px;
+                border: solid 1px #ccc;
+                box-shadow: 1px 2px 5px rgba(0, 0, 0, .31);
+                background: white;
+                vertical-align: middle;
+            }
+            
+            p {
+                font-size: 20px;
+                padding: 10px;
+                margin: auto;
                 text-align: center;
             }
             
-            button {
-                width: 50%;
-                padding: 10px 0;
-                margin: 10px auto;
-                margin-left: auto;
-                margin-right: auto;
-                border-radius: 5px;
-                border: none;
-                background: #1c87c9;
-                font-size: 14px;
-                font-weight: 600;
-                color: #fff;
-            }
-            
-            #dropdown {
-                width: 250px;
-                float: inline-end;
+            .center_bttn {
                 margin: auto;
+                width: 40%;
             }
         </style>
 </head>
@@ -39,77 +53,93 @@
     <div class="topnav">
         <%-include('./inc/nav_bar')%>
     </div>
+    <div class="main-block-createe">
 
-    <div class="header">
-        <h2>Telefon Sat</h2>
-    </div>
-    <form action="phone_sell" , method="post" , enctype="multipart/form-data">
-        <div class="center">
-            <p>Adınız Soyadınızı Giriniz:</p>
-            <div>
-                <input type="text" name="name" placeholder="Ad" required/>
-                <input type="text" name="lastname" placeholder="Soyad" required/>
-            </div>
-        </div>
-        <div class="center">
-            <p>Telefon Numaranızı Giriniz:</p>
-            <div>
-                <input type="text" name="phone" placeholder="5** *** ** **" required/>
-            </div>
-        </div>
-        <div class="center">
-            <p>Adresinizi Giriniz:</p>
-            <textarea cols=50% rows="2" name="address" required></textarea>
-        </div>
-        <div>
-            <label for="dropdown" class="center">Telefon Markası Giriniz:</label>
 
-            <select id="dropdown" class="center">
+
+
+        <div class="header">
+            <h2>Telefon Sat</h2>
+        </div>
+        <form action="phone_sell" , method="post" , enctype="multipart/form-data">
+            <div class="center">
+                <p>Adınız Soyadınızı Giriniz:</p>
+                <div>
+                    <input type="text" name="name" placeholder="Ad" required/>
+                    <input type="text" name="lastname" placeholder="Soyad" required/>
+                </div>
+            </div>
+            <div class="center">
+                <p>Telefon Numaranızı Giriniz:</p>
+                <div>
+                    <input type="text" name="phone" placeholder="5** *** ** **" required/>
+                </div>
+            </div>
+            <div class="center">
+                <p>Bulunduğununu Şehri Giriniz:</p>
+                <input type="text" name="city" placeholder="İstanbul" required/>
+            </div>
+            <div class="center_bttn">
+                <p for="dropdown" class="dropdown">Telefon Markası Giriniz:</p>
+
+                <select id="dropdown" name="brand">
             <option value="Iphone">Iphone</option>
             <option value="Samsung">Samsung</option>
             <option value="Xiaomi">Xiaomi</option>
             <option value="Oppo">Oppo</option>
-        </select>
-        </div>
-        <br>
-        <div class="center">
-            <p>Telefon Modelini Giriniz:</p>
-            <input type="text" name="model" required/>
-        </div>
-        <br>
-        <div>
-            <label for="dropdown" class="center">Telefon Hafızası Seçiniz:</label>
+            </select>
+            </div>
+            <br>
+            <div class="center">
+                <p>Telefon Modelini Giriniz:</p>
+                <input type="text" name="model" required/>
+            </div>
+            <br>
+            <div class="center">
+                <p>Telefon Rengini Giriniz:</p>
+                <input type="text" name="color" required/>
+            </div>
+            <div class="center">
+                <p>Telefon Fiyatı Giriniz:</p>
+                <input type="text" name="price" required/>
+            </div>
+            <div class="center_bttn">
+                <p for="dropdown" class="center">Telefon Hafızası Seçiniz:</p>
 
-            <select id="dropdown" class="center">
+                <select id="dropdown" class="dr" name="capacity">
             <option value="16gb">16GB</option>
             <option value="32gb">32GB</option>
             <option value="64gb">64GB</option>
             <option value="128gb">128GB</option>
             <option value="256gb">256GB</option>
         </select>
-        </div>
-        <br>
-        <div class="center">
-            <p>Belirtmek istediğiniz detayları yazınız: </p>
-            <textarea cols=50% name="detail" rows="2"></textarea>
-        </div>
+            </div>
+            <br>
+            <div>
+                <p>Belirtmek istediğiniz detayları yazınız: </p>
+                <textarea cols=100% name="detail" rows="2"></textarea>
+            </div>
 
-        <br>
-        <div class="center">
-            <p>Kapak Resmi </p>
-
-
-        </div>
-        <div class="center">
-            <input type="file" accept="image/*" name="myImage" placeholder="Resim Yükle" required/>
-        </div>
+            <br>
+            <div class="center">
+                <p>Kapak Resmi </p>
 
 
-        <br>
-        <a href="/" class="center">İptal etmek için tıklayın. </a>
-        <div class="btn-block">
-            <button onclick=""> <a href="phone_buy"></a> İlanı Ekleyin</button>
-        </div>
+            </div>
+            <div class="center_bttn">
+                <input type="file" accept="image/*" name="post_image" placeholder="Resim Yükle" required/>
+            </div>
+
+
+            <br>
+            <div class="center_bttn">
+                <a href="/">İptal etmek için tıklayın. </a>
+            </div>
+
+            <div class="btn-block">
+                <button onclick=""> <a href="phone_buy"></a> İlanı Ekleyin</button>
+            </div>
+    </div>
     </form>
 
 </body>

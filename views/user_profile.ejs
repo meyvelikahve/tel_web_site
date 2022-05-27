@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include('./inc/head')%>
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/navigation_bar.css">
+        <title>Document</title>
+
+        <style>
+            h1,
+            p,
+            a,
+            div {
+                text-align: center;
+            }
+        </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <%-include('./inc/nav_bar')%>
+    </div>
+    <h1>Profil</h1>
+    <div>
+
+        <p>Hoş Geldiniz:
+            <%= user.name %>
+        </p>
+        <a href="/logout" class="btn btn-secondary">Çıkış yap</a>
+    </div>
+
+</body>
+
+</html>

@@ -14,10 +14,6 @@ const PhoneSchema = new Schema({
         type: String,
         require: true
     },
-    address: {
-        type: String,
-        require: true
-    },
     city: {
         type: String,
         require: true
@@ -46,12 +42,10 @@ const PhoneSchema = new Schema({
         type: String,
         //require: true
     },
-    img:
-    {
-        data: Buffer,
-        contentType: String
-    }
-    //image
+    img: {
+        type: String,
+        default: 'placeholder.jpg',
+    },
 
 
 
